@@ -73,6 +73,16 @@ struct gameState {
   int playedCardCount;
 };
 
+/*	Refactored Code - cards are implemented in their own functions, 
+	rather than as part of the switch statement in function cardEffect */
+	
+	void callAdventurer(int cardDrawn, int drawntreasure, struct gameState *states, int currentPlayer, int temphand[], int z);
+	void callSmithy(int currentPlayer, struct gameState *state, int handPos);
+	void callCutPurse(int currentPlayer, struct gameState *state, int handPos);
+    void callBaron(struct gameState *state, int currentPlayer, int choice1);
+	void callMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2);
+
+
 /* All functions return -1 on failure, and DO NOT CHANGE GAME STATE;
    unless specified for other return, return 0 on success */
 
