@@ -1,0 +1,232 @@
+Result for running dominion tests:
+unittest1.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+You currently have 5 cards in hand
+Your deck currently has 30 cards
+
+You are calling Smithy 1 time and adding a total of 3 cards to your hand
+ After using smithy you must discard it
+  ---> (3 cards gained) - (1 card discarded) = 2 cards gained total
+
+Smithy has been called
+ --> Your hand now has 8 cards
+ --> Your deck now has 26 cards
+
+Assert if smithy added 2 cards (in total) to player hand
+
+Smithy DOES NOT add the correct number of cards to the player's hand!
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:18.94% of 565
+Branches executed:18.14% of 419
+Taken at least once:14.56% of 419
+Calls executed:10.42% of 96
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+Copper is an enumerated variable with a value of: 4. Silver is 5 and gold 6
+
+Card for player 0 at position 0 is 4 (aka copper)
+Card for player 1 at position 0 is 4 (aka copper)
+Card for player 2 at position 0 is 4 (aka copper)
+Card for player 3 at position 0 is 4 (aka copper)
+
+cutpurse will be called:
+
+Player 1 now has card 5 in position 0 of their hand
+Player 2 now has card 5 in position 0 of their hand
+Player 3 now has card 5 in position 0 of their hand
+
+ -> Player 1 has lost their copper piece!
+ -> Player 2 has lost their copper piece!
+ -> Player 3 has lost their copper piece!
+
+ cutpurse has successfully removed copper from each opposing player 
+
+File 'dominion.c'
+Lines executed:20.35% of 565
+Branches executed:20.05% of 419
+Taken at least once:16.47% of 419
+Calls executed:11.46% of 96
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+
+There are 8 estates in supply at the start of this game
+ -> There are currently 8 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 8 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 8 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 8 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 8 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 6 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 4 estates and the game goes on!
+   - callBaron function is called
+ -> There are currently 2 estates and the game goes on!
+   - callBaron function is called
+
+When calling baron through a variety of estate supply values no issues are noted
+
+File 'dominion.c'
+Lines executed:23.36% of 565
+Branches executed:22.91% of 419
+Taken at least once:18.14% of 419
+Calls executed:12.50% of 96
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+Current coins of player 0 is: 3
+
+callMinions will be called:
+
+Player 0 now has 5 coins
+
+Function callMinion when selecting choice 1 returns an increase of 2 coins
+
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:19.12% of 565
+Branches executed:18.14% of 419
+Taken at least once:14.32% of 419
+Calls executed:9.38% of 96
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+
+hand count for player 0 is: 5
+callAdventurer function is called with inappropriate drawntreasure argument:
+hand count for player 0 is now: 5
+
+No new cards were added to the players hand!
+
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:16.81% of 565
+Branches executed:17.18% of 419
+Taken at least once:13.84% of 419
+Calls executed:8.33% of 96
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+
+Initial deck count for player 0 is: 30
+callSmithy function is called:
+ --> Your hand now has 8 cards
+ --> Your deck now has 26 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 11 cards
+ --> Your deck now has 22 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 14 cards
+ --> Your deck now has 18 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 17 cards
+ --> Your deck now has 14 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 20 cards
+ --> Your deck now has 10 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 23 cards
+ --> Your deck now has 6 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 26 cards
+ --> Your deck now has 2 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 27 cards
+ --> Your deck now has 0 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 26 cards
+ --> Your deck now has 0 cards
+
+Smithy DOES NOT remove the correct number of cards from the player's deck!
+callSmithy function is called:
+ --> Your hand now has 25 cards
+ --> Your deck now has 0 cards
+
+Smithy removes the correct number of cards from the player's deck!
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:20.71% of 565
+Branches executed:19.09% of 419
+Taken at least once:15.51% of 419
+Calls executed:11.46% of 96
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+
+At beginning of game player 0 has 3 coins
+
+cardEffect is called with a value chosen to switch to the embargo case:
+
+Player 0 now has 5 coins!
+
+Embargo added the correct number of coins to the player!
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:20.35% of 565
+Branches executed:23.63% of 419
+Taken at least once:14.80% of 419
+Calls executed:10.42% of 96
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+------------------------------------------------------------------------------
+
+Initializing a new game of dominion
+
+Player 0 actions are currently 1
+
+Call cardEffect function with village case argument:
+
+Player 0 number of actions has increased to: 3
+
+Village added the correct number of actions to the player!
+------------------------------------------------------------------------------
+File 'dominion.c'
+Lines executed:22.30% of 565
+Branches executed:24.11% of 419
+Taken at least once:15.51% of 419
+Calls executed:12.50% of 96
+Creating 'dominion.c.gcov'
+
