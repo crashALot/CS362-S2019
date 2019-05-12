@@ -6,8 +6,10 @@
 char inputChar()
 {
     // TODO: rewrite this function
-	int randVal=((rand()*INT_MAX)/INT_MAX)*10; // Creates random value between 0 and 9
-	char charArr[9]={'[', '(', '{', ' ', 'a', 'x', '}', ')', ']'}; // Characters included in testme()
+    int maxNum=9, minNum=0;
+	int randVal=rand()%(maxNum+1-minNum)+minNum; // Creates random value between 0 and 9
+    //printf("randVal is %d\n", randVal);
+	char charArr[9]={'[', '(', '{', ' ', 'a', 'x', '}', ')', ']'}; // Characters included in testme() that we'll be testing against
 	char randChar=charArr[randVal];
     return randChar;
 }
@@ -15,16 +17,25 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-	// 97 123
-	int randVal=((rand()*INT_MAX)/INT_MAX)*26; // Randomly selects value between 0 and 25
+    int maxNum=4, minNum=0;
 	char charArr[6]; // Character array that stores 5 characters and a delimiter
+    char randChar[4]={'r','e','s','t'};
 	// Fills character array with random string of characters
 	for (int i=0; i<5; i++)
 	{
-		charArr[i]=122-randVal; // ASCII Math to convert int to char
+		charArr[i]=randChar[rand()%(maxNum+1-minNum)+minNum]; // ASCII Math to convert int to char, in this case randomly selects lower case letters
 	}
-	charArr[5]='\0';
-    return charArr;
+	charArr[5]='\0'; //  Terminate C-string
+    /*
+    for (int i=0; i<6; i++)
+    {
+        printf("%c ", charArr[i]);
+    }
+    printf("\n");
+    */
+    char *stringPtr=charArr;
+    
+    return stringPtr;
 }
 
 void testme()
