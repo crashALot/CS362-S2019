@@ -6,13 +6,25 @@
 char inputChar()
 {
     // TODO: rewrite this function
-    return ' ';
+	int randVal=((rand()*INT_MAX)/INT_MAX)*10; // Creates random value between 0 and 9
+	char charArr[9]={'[', '(', '{', ' ', 'a', 'x', '}', ')', ']'}; // Characters included in testme()
+	char randChar=charArr[randVal];
+    return randChar;
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-    return "";
+	// 97 123
+	int randVal=((rand()*INT_MAX)/INT_MAX)*26; // Randomly selects value between 0 and 25
+	char charArr[6]; // Character array that stores 5 characters and a delimiter
+	// Fills character array with random string of characters
+	for (int i=0; i<5; i++)
+	{
+		charArr[i]=122-randVal; // ASCII Math to convert int to char
+	}
+	charArr[5]='\0';
+    return charArr;
 }
 
 void testme()
